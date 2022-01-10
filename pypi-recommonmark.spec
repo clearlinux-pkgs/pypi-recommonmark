@@ -4,7 +4,7 @@
 #
 Name     : pypi-recommonmark
 Version  : 0.7.1
-Release  : 28
+Release  : 29
 URL      : https://files.pythonhosted.org/packages/1c/00/3dd2bdc4184b0ce754b5b446325abf45c2e0a347e022292ddc44670f628c/recommonmark-0.7.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1c/00/3dd2bdc4184b0ce754b5b446325abf45c2e0a347e022292ddc44670f628c/recommonmark-0.7.1.tar.gz
 Summary  : A docutils-compatibility bridge to CommonMark, enabling you to write CommonMark inside of Docutils & Sphinx projects.
@@ -14,12 +14,8 @@ Requires: pypi-recommonmark-bin = %{version}-%{release}
 Requires: pypi-recommonmark-license = %{version}-%{release}
 Requires: pypi-recommonmark-python = %{version}-%{release}
 Requires: pypi-recommonmark-python3 = %{version}-%{release}
-Requires: commonmark
+Requires: pypi(commonmark)
 BuildRequires : buildreq-distutils3
-Provides: recommonmark
-Provides: recommonmark-python
-Provides: recommonmark-python3
-BuildRequires : commonmark
 BuildRequires : pypi(commonmark)
 BuildRequires : pypi(docutils)
 BuildRequires : pypi(sphinx)
@@ -77,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641488160
+export SOURCE_DATE_EPOCH=1641837749
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
